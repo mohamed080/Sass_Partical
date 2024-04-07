@@ -1,0 +1,145 @@
+@import "./sass/helpers/variables";
+
+$float-left: right;
+$float-right: left;
+
+
+$text-right: left;
+$text-left: right;
+
+.header {
+    .logo {
+
+        @media #{$minMedium} {
+            float: $float-left;
+            text-align: $text-left;
+        }
+        .the-toggler {
+            right: auto;
+            left: 15px;
+        }
+
+    }
+
+    .navbar {
+
+        @media #{$minMedium} {
+            float: $float-left;
+        }
+
+        li {
+            float: $float-left;
+
+            @media #{$maxMobile} {
+                text-align: $text-left;
+            }
+        }
+    }
+}
+
+.slider {
+    blockquote {
+        font: {
+            size: 20px;
+            style: italic;
+            weight: 500;
+        }
+
+        line-height: 1.7;
+        text-align: center;
+        width: 80%;
+        margin: 30px auto;
+        color: #5e5e5e;
+    }
+
+    .slider-container {
+        margin: 10px auto;
+        width: 98%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+
+        // @media #{$maxMobile} {
+        //     height: 200px;
+        // }
+        @media (max-width: 500px) {
+            height: 200px;
+        }
+
+        img {
+            max-width: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s;
+            z-index: 1;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .slider-controls {
+        .prev {
+            float: $float-left;
+        }
+
+        .next {
+            float: $float-right;
+        }
+
+        .indicators {
+            float: $float-left;
+        }
+    }
+}
+
+/* End Slider */
+/* Start Services */
+// .services {
+
+// }
+
+/* End Services */
+
+/* Start Our Players */
+.our-players {
+    .players-content {
+        @media #{$minSamll} {
+            float: $float-right;
+        }
+
+        @media #{$minMedium} {
+            text-align: $text-left;
+        }
+    }
+}
+
+/* End Our Players */
+.footer {
+    .gallery,
+    .info,
+    .contact {
+        float: $float-left;
+    }
+
+    .gallery {
+        .img-box {
+            img {
+                float: $float-left;
+            }
+            .text {
+                float: $float-left;
+            }
+        }
+    }
+        .copytext,
+        .author {
+            float: $float-left;
+            width: 50%;
+        }
+
+        .author {
+            text-align: $text-right;
+        }
+}

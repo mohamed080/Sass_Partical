@@ -1,0 +1,140 @@
+.footer {
+  background-color: #e2e2e2;
+  overflow-x: hidden;
+  padding-top: 30px;
+  margin-top: 50px;
+
+  .gallery,
+  .info,
+  .contact {
+    float: $float-left;
+  }
+
+  .gallery {
+    width: 50%;
+    @media #{$minSamll} {
+      width: 100%;
+    }
+    @media #{$minMedium} {
+      width: 50%;
+    }
+    @media #{$maxMobile} {
+      width: 100%;
+    }
+    .img-box {
+      overflow: hidden;
+
+      img {
+        float: $float-left;
+        width: 150px;
+        height: 150px;
+        padding-bottom: 20px;
+      }
+
+      .text {
+        float: $float-left;
+        width: calc(100% - 190px);
+        margin-left: 20px;
+        margin-right: 20px;
+
+        h4 {
+          color: $redColor;
+          margin: 5px 0;
+        }
+
+        p {
+          color: #6a6767;
+          line-height: 1.9;
+          margin-top: 14px;
+          @media #{$maxMobile} {
+            line-height: 1.3;
+            max-height: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  .info {
+    @media #{$minSamll} {
+      width: 50%;
+    }
+    @media #{$minMedium} {
+      width: 25%;
+    }
+    @media #{$maxMobile} {
+      width: 50%;
+    }
+    
+
+    ul {
+      line-height: 1.7;
+    }
+
+    a {
+      color: #6a6767;
+
+      span {
+        color: $redColor;
+      }
+    }
+
+    h4 {
+      margin: 5px 0;
+    }
+
+    p {
+      color: #6a6767;
+    }
+  }
+
+  .contact {
+    @media #{$minSamll} {
+      width: 50%;
+    }
+    @media #{$minMedium} {
+      width: 25%;
+    }
+    @media #{$maxMobile} {
+      width: 50%;
+    }
+
+    .sectionn-title {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: normal;
+      color: #666;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      border: 1px solid #c9c9c9;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 10px;
+    }
+
+    textarea {
+      height: 140px;
+      resize: none;
+    }
+  }
+
+  .copyright {
+    padding: 25px 0;
+    border-top: 2px solid #c9c9c9;
+    overflow: hidden;
+    color: #888;
+    .copytext,
+    .author {
+      float: $float-left;
+      width: 50%;
+    }
+    .author {
+      text-align: $text-right;
+    }
+  }
+
+}
